@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "web-storage-cache": "^1.0.3"
+  }
+}
