@@ -13,7 +13,7 @@ global.ePub = Epub;
 
 export default {
   computed: {
-    ...mapGetters(["fileName"])
+    ...mapGetters(["fileName","menuVisible"])
   },
   methods: {
     prevPage() {
@@ -27,7 +27,13 @@ export default {
       }
     },
 
-    toggleTitleAndMenu() {},
+    toggleTitleAndMenu() {
+      console.log('title');
+      console.log(this.$store.state.book.menuVisible);
+      this.$store.dispatch('setMenuVisible',!this.$store.state.book.menuVisible)
+            console.log(this.$store.state.book.menuVisible);
+
+    },
 
     initEpub() {
       const url =
